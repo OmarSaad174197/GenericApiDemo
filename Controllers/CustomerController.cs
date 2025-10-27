@@ -2,7 +2,6 @@
 using GenericDemo.Dtos.CustomerDtos;
 using GenericDemo.Interfaces;
 using GenericDemo.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericDemo.Controllers

@@ -9,11 +9,11 @@ namespace GenericDemo.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<AddProductDto, Product>();
+        CreateMap<Product, ProductResponseDto>();
+        CreateMap<ProductRequestDto, Product>();
 
-            CreateMap<Customer, CustomerDto>().ReverseMap();
-            CreateMap<AddCustomerDto, Customer>();
+        CreateMap<Customer, CustomerResponseDto>();
+        CreateMap<CustomerRequestDto, Customer>();
         }
     }
 }
