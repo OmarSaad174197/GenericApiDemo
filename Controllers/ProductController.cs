@@ -8,7 +8,7 @@ namespace GenericDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : GenericController<Product, ProductDto, AddProductDto>
+    public class ProductsController : GenericController<Product, ProductResponseDto, ProductRequestDto>
 
     {
         public ProductsController(IUnitOfWork uow, IMapper mapper) : base(uow, mapper) { }
