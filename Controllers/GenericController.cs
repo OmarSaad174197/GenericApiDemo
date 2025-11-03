@@ -11,16 +11,16 @@ namespace GenericDemo.Controllers
         where TRequest : class
         where TResponse : class
     {
-        protected readonly IUnitOfWork Uow;
-        protected readonly IMapper Mapper;
+        private readonly IUnitOfWork Uow;
+        private readonly IMapper Mapper;
 
         public GenericController(IUnitOfWork uow, IMapper mapper)
         {
             Uow = uow;
             Mapper = mapper;
         }
-        protected IGenericRepository<TEntity> Repo => Uow.Repository<TEntity>();
-        protected object? GetEntityId(TEntity entity)
+        private IGenericRepository<TEntity> Repo => Uow.Repository<TEntity>();
+        private object? GetEntityId(TEntity entity)
         {
             var prop = typeof(TEntity).GetProperty("Id");
             return prop?.GetValue(entity);
